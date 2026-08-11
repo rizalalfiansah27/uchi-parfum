@@ -367,3 +367,26 @@ body{
     border-radius:50%;
     overflow:hidden;
 }
+.footer p{
+    margin:0;
+    font-size:13px;
+    font-weight:600;
+}
+
+.footer span{
+    font-size:11px;
+    opacity:.7;
+}
+.jumlah-produk{
+    display:block;
+    margin-top:4px;
+    margin-bottom:10px;
+    font-size:11px;
+    color:white;
+    opacity:.8;
+}
+
+#total-produk{
+    font-weight:700;
+    opacity:1;
+}
