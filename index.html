@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Uchi Parfum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta http-equiv="Content-Security-Policy"
+content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com;">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="header-left">
+            <img src="images/uchiparfumnew.png" alt="uchiparfumnew">
+            <div>
+                <h1>UCHI PARFUM BELIK</h1>
+                <p>Jl.Raya Gatot Subroto (Depan Pasar Belik) Keretan, Kec. Belik, Kab Pemalang Jawa Tengah 083845279773</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <span class="material-icons search-icon">search</span>
+        <input type="text" placeholder="Cari parfum kesukaanmu...">
+    </div>
+
+    <!-- List -->
+    <main class="app-content">
+
+        <div class="card">
+            <div class="card-header">
+                <img src="images/1direction-asli.jpg">
+                <div class="card-info">
+                    <h3>1 Direction</h3>
+                    <span>Floral • Soft </span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                1 Direction memiliki aroma yang segar dan lembut.
+                Dipadukan dari aroma buah-bauahan segar, seperti Pink Grapefruit
+                dan Red Currant, aroma bunga yang lembut, seperyi Fressia dan Jasmine,
+                hingga sentuhan Musk, Patcholi, dan Woodsy Notes yang khas.
+                Aroma ini menyatu menjadi satu wangi yang memberikan
+                berbagai macam kesan untuk dirimu.
+                <br><br>
+                <strong>Dominant notes</strong><br>
+                Red currant
+                <br><br>
+                <strong>Element Notes</strong><br>
+                Red currant, Fragipani, Jasmine
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/ADISPORT.webp">
+                <div class="card-info">
+                    <h3>Adisport</h3>
+                    <span>Fresh • Aromatic </span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Adisport memiliki aroma yang segar dengan sentuhan aromatic
+                yang khas untuk menambah kesan hangat. Dikombinasikan dari notes Tomato
+                Leaf, Mint, dan Anise. Seluruh notes ini menyatu menjadi satu aroma yang segar
+                dengan komposisi yang ringan, membuat aroma ini cocok dipakai untuk olahraga.
+                <br><br>
+                <strong>Dominant notes</strong><br>
+                Tomato Leaf
+                <br><br>
+                <strong>Element Notes</strong><br>
+                Mint, Anise
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/Bandito.webp">
+                <div class="card-info">
+                    <h3>Bandito</h3>
+                    <span>Woody • Woods</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Aroma berkarakter Woodyyang kuat dan didominasi oleh Balsam Fir
+                yang memberikan sensasi segar dan menenangkan.
+                <br><br>
+                <strong>Dominant notes</strong><br>
+                Balsamar Fir
+                <br><br>
+                <strong>Element Notes</strong><br>
+                Cashmere Wood, Musk
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/black-seduce.jpg">
+                <div class="card-info">
+                    <h3>Black Seduce</h3>
+                    <span>Fresh • Aromatic</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Black Seduce didominasi oleh Sea Notes
+                yang menyegarkan dan menenangkan. Dipadukan dengan kehangatan Musk,
+                Pachouli, Citruses, dan Fruits membuat aroma ini semakin menyejukkan.
+                <br><br>
+                <strong>Dominant notes</strong><br>
+                Sea notes
+                <br><br>
+                <strong>Element Notes</strong><br>
+                Citruses, Fruity Notes
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/black-flower.jpg">
+                <div class="card-info">
+                    <h3>Black Flower</h3>
+                    <span>Oriental • Soft Oriental</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Aroma Black Flower menggabungkan kesegaran buah dengan kehangatan
+                dari bahan-bahan oriental. Cocok buat kamu yang suka wangi eksotis,
+                menggoda, dan terkesan lebih klasik.
+                <br><br>
+                <strong>Dominant notes</strong><br>
+                Vanille
+                <br><br>
+                <strong>Element Notes</strong><br>
+                Mexican Chocolatte, Heliotrope
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/vanity.png">
+                <div class="card-info">
+                    <h3>Vanity</h3>
+                    <span>Oriental • Soft Oriental</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Vanity memiliki aroma yang lembut dan hangat.
+                Aroma bekarakter Oriental - Soft Oriental ini memiliki note dominan
+                dari peach yang menyegarkan dan terasa juicy.
+                Diimbangi dengan sentuhan rempah yang menggoda
+                membuat aromanya terasa lebih menenangkan.
+                <br><br>
+                <strong>Dominant notes</strong><br>
+                Peach
+                <br><br>
+                <strong>Element Notes</strong><br>
+                Granny Smith Apple, Heliotrope
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/vanity.png">
+                <div class="card-info">
+                    <h3>Yuzuria</h3>
+                    <span>Fresh • Fruity</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Yuzuria memiliki karakter Fresh - Fruity yang segar dan energik,
+            menampilkan dominan aroma Yuzu yang khas. Begitu semprotan pertama
+            menyentuh kulit, wangi cerah dan bersemangat dari Yuzu, Litchi, dan Lemon
+            langsung menggelitik penciuman, memberikan kesan segar yang menyegarkan 
+            seperti berjalan di taman buah tropis saat pagi hari.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Yuzu
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Litchi, Lemon
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/the-beach.jpg">
+                <div class="card-info">
+                    <h3>The Beach</h3>
+                    <span>Floral • Floral pure</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                The Beach adalah wangi yang didominasi oleh buah apel,
+                membuat wangi ini terasa segar. Ditambah sentuhan aroma
+                dari bunga-bunga indah yang memberikan sensasi sejuk
+                saat pertama kali disemprotkan. Kamu akan merasakan suasana
+                bersantai layaknya di tepi pantai.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Apple
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Mandarin Orange, Lemon
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/vanity.png">
+                <div class="card-info">
+                    <h3>Sui Dream</h3>
+                    <span>Oriental • Soft Oriental</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Sui Dream, aroma yang diciptakan dari buah-buahan segar,
+                seperti bergamot dan mandarin orange. Meskipun wangi ini
+                didominasi oleh wangi segar yang muncul dari bergamot,
+                wangi ini tetap memiliki keharuman yang lembut dan manis
+                dari bunga Rose dan Chinese peony. Disertai dengan sedikit
+                sensasi hangat dari adanya musk dan sandalwood.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Apple
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Mandarin Orange, Lemon
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/agnezmo.jpg">
+                <div class="card-info">
+                    <h3>Agnez Mo</h3>
+                    <span>Fresh • Fruity</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Agnez Mo memiliki aroma buah-buahan yang menyegarkan,
+                seperti Pineapple, Pear, dan Mango. Masing-masing buah ini
+                memberikan kontribusi wangi yang khas, seperti aroma manis,
+                asam, dan juicy. Sensasinya seperti jus mixing yang memberikan aroma khas
+                dan semakin nyaman untuk dinikmati.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Pineapple
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Pear, Mango
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/ariel.jpg">
+                <div class="card-info">
+                    <h3>Ariel</h3>
+                    <span>Oriental • Woody Oriental</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Ariel memiliki aroma Woody Oriental yang hangat, manis,
+                dan menyegarkan. Dikomposisikan dari perpaduan Passionfruit,
+                Vodkan, dan Lime.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Passionfruit
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Vodka , Lime
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/alasca.jpg">
+                <div class="card-info">
+                    <h3>Alasca</h3>
+                    <span>Fresh • Citrus</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                AAlasca memiliki aroma segar dari keharuman Bergamot dan Grapefruit.
+                Mendapat sentuhan Lavender yang membuat wangi ini terasa lebih menyejukkan.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Bergamot
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Lavender , Grapefruit
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/Coffee-Flame.jpg">
+                <div class="card-info">
+                    <h3>Coffe flame</h3>
+                    <span>Oriental • Oriental</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Parfum ini menghadirkan kehangatan aroma Oriental yang memikat.
+                Aroma yang didominasi Drak Chocolate ini akan memberikan sentuhan manis
+                yang pekat. Base notes dari aroma ini juga akan diperkarya oleh manisnya vanilla,
+                kelezatan whipped cream, hingga kehangatan amber dan patchouli untuk memberikan
+                sentuhan akhir yang khas.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Dark Chocolate
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Red pepper , Sage
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/cocowhip.jpg">
+                <div class="card-info">
+                    <h3>Coco Whip</h3>
+                    <span>Oriental • Oriental</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Coklat memiliki aroma khas yang manis dan gurih.
+                Kami ciptakan dari Dark Choclate yang dominan dan dipadukan
+                dengan beberapa notes dari karakter oriental dan fresh.
+                Seluruhnya menyatu yang menghasilkan aroma manis seperti
+                coklat yang biasa kita nikmati.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Dark Chocolate
+            <br><br>
+                <strong>Element Notes</strong><br>
+                vanilla , whipped cream
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/Bourbond.jpg">
+                <div class="card-info">
+                    <h3>Bourbond</h3>
+                    <span>Fresh • Aromatic</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Bourbond adalah perwujudan dari aroma segar, hangat,
+                dan menenangkan yang terjalin secara harmonis dalam
+                setiap semprotannya. Wangi yang didominasi oleh wangi mint ini
+                dapat menjadi pilihan yang tepat bagi kamu yang suka aroma hangat,
+                tetapi masih memiliki kesegaran yang menenangkan.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Mint
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Cedar, Lavender
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/Peach.jpg">
+                <div class="card-info">
+                    <h3>Peach</h3>
+                    <span>Floral • Floral Oriental</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Peach ini segar dan manis lembut, dibuka dengan aroma pomegranate yang juicy,
+                lalu diikuti sentuhan freesia dan lily-of-the-valley yang feminin. Hasilnya hangat,
+                ringan, dan elegan untuk dipakai sehari-hari
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                pomegranate
+            <br><br>
+                <strong>Element Notes</strong><br>
+                freesia, lily-of-the-valley
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/agnezmo.jpg">
+                <div class="card-info">
+                    <h3>Extreme</h3>
+                    <span>Woody • Woods</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Parfum "Extreme" menawarkan pengalaman aroma aromatik yang memikat,
+                dengan karakter Woody - Woods yang kuat dan mendominasi. Bahkan,
+                sejak semprotan pertama, kamu akan merasakan kesegaran unik dari Calabrian
+                Bergamot dan Pink Grapefruit yang menambahkan sentuhan keasaman yang menyegarkan.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Cactus Juice
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Calabrian Bergamot, Pink Grapefruit
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/Aquatic.jpg">
+                <div class="card-info">
+                    <h3>Aquatic</h3>
+                    <span>Fresh • Citrus</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Aquatic menghadirkan kesegaran alami seolah membawa kamu menuju
+                tempat yang menenangkan di pagi hari. Aroma ini diawali dengan keharuman
+                citrus yang menyegarkan dari buah Mandarin Orange, Orange, dan Petitgrain.
+                Perpaduan itu menciptakan suasana yang bersemangat dan berenergi.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Seaweed
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Mandarin Orange, Orange
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/amethyst.jpg">
+                <div class="card-info">
+                    <h3>Amethyst</h3>
+                    <span>Floral • Sodt Floral</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Aroma yang akan menyambut kamu dengan kesegaran dan keceriaan
+                dari Green Notes dan Pink Grapefruit. Menciptakan suasana yang segar dan bersemangat.
+                Dipadukan dengan keharuman lembut Iris dan Bulgarian Rose yang akan memberikan kamu
+                keanggunan lebih memikat.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Heliotrope
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Woodsy notes, Iris
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/bullblack.jpg">
+                <div class="card-info">
+                    <h3>Bull Black</h3>
+                    <span>Woody • Dry Woods</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Keharuman dari kombinasi Leather, Vanilla, dan Green Tea
+                yang menghasilkan aroma manis, hangat, dan sentuhan segar alami.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Leather
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Vanilla, lGreen tea
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/Crystal-Lotus.jpg">
+                <div class="card-info">
+                    <h3>Crystal Lotus</h3>
+                    <span>Floral • Floral Oriental</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Crystal Lotus kami gambarkan sebagai aroma yang anggun dan tenang,
+                dan memberikan kesegaran lembut dari perpaduan Bamboo dan Pear.
+                Aroma parfum ini juga didominasi oleh Lotus untuk memberikan kesan segar yang menenangkan,
+                disertai kehangatan dari Tea dan Cassia. Perpaduan ini cocok kamu gunakan untuk mendapatkan
+                aroma yang segar, tetapi menenangkan.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Lotus
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Msuk, Tea
+            </div>
+        </div>
+<div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/exsport.jpg">
+                <div class="card-info">
+                    <h3>Exsport</h3>
+                    <span>Fresh • Citrus</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Exsport memiliki aroma Citrus yang dihasilkan dari perpaduan Tea,
+                Grapefruit, dan Bergamot. Setiap notes dominan memiliki peran penting dalam
+                memberikan keharuman yang berbeda-beda, mulai dari harum teh hingga buah-buahan segar.
+                Seluruhnya menyatu menjadi satu memberikan kamu sensasi yang menyejukkan.
+            <strong>Dominant notes</strong><br>
+                Citrus
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Grapefruit, Bergamot
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/agnezmo.jpg">
+                <div class="card-info">
+                    <h3>Poppin Pink</h3>
+                    <span>Fresh • Fruity</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Peach ini segar dan manis lembut, dibuka dengan aroma pomegranate yang juicy,
+                lalu diikuti sentuhan freesia dan lily-of-the-valley yang feminin. Hasilnya hangat,
+                ringan, dan elegan untuk dipakai sehari-hari
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Wild Berries
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Vanilla, Pear
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/Belligi.jpg">
+                <div class="card-info">
+                    <h3>Belligi</h3>
+                    <span>Fresh • Fruity</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Beliggi memiliki aroma yang didominasi oleh buah-buahan segar dan alami.
+                Pada semprotan pertama, kamu akan diberikan ledakan buah manis dan segar
+                yang akan membawa kamu pada sensasi ceria, berenergi, dan penuh semangat.
+                Diimbangi dengan aroma hangat dari musk dan lily of the valley membuat
+                wangi ini semakin sempurna untuk menemani hari-harimu.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Rasberry
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Strawberry, Mandarin Orange
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/buttonpink.jpg">
+                <div class="card-info">
+                    <h3>Button Pink</h3>
+                    <span>Fresh • Citrus</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Button Pink adalah parfum yang cocok untuk menemani aktivitas sehari-hari.
+                Aromanya dapat membawa kesegaran yang alami dan bisa meningkatkan mood kamu.
+                Kami ciptakan dari perpaduan Lemon yang segar dengan aroma bunga, seperti Rose,
+                Ylang-Ylang, dan Jasmin. Bunga-bunga ini menyeimbangi aroma segar dari lemon
+                sehingga terasa lebih lembut dan enak untuk dinikmati.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Lemon
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Rose, Green Leaves
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/Fantasy.jpg">
+                <div class="card-info">
+                    <h3>Fantasy</h3>
+                    <span>Fresh • Fruity</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Fantasy adalah wangi dengan karakter Fresh - Fruity yang menggoda.
+                Setiap semprotannya dibaluti dengan aroma segar dan manis yang lembut
+                dari buah kiwi, red litchi, dan quince. Aromanya juga berpadu dengan
+                White Chocolate dan Cupcake yang creamy berpadu dengan Orchid dan Jasmine
+                membuat kesan manis semakin terasa. Aroma ini cocok digunakan untuk kamu
+                yang suka aroma segar dan manis untuk digunakan setiap hari.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                White Chocolate
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Cupcake, Kiwi
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/SweetApple.jpg">
+                <div class="card-info">
+                    <h3>Sweet Apple</h3>
+                    <span>Fresh • Fruity</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+            Sweet Apple memiliki keharuman pure oriental yang dihasilkan dari perpaduan
+            notes Apple dan Sugar. Aromanya yang manis dan kaya akan keharuman rempah yang khas,
+            dapat memberikan kamu keharuman yang tidak terlupakan.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Apple
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Sugar, Apple
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/vanilla.jpg">
+                <div class="card-info">
+                    <h3>Vanilla</h3>
+                    <span>Oriental • Soft Oriental</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Aroma ini memiki kesan yang hangat, menenangkan, dan sensual
+                karena memiliki notes vanilla yang dominan. Ditambah sentuhan segar
+                dari aroma buah Apricot, Peach, Plum, dan Lemon, menjadikan wangi ini
+                memiliki perpaduan yang pas sebagai oriental yang lembut dan segar.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Vanillaa
+            <br><br>
+                <strong>Element Notes</strong><br>
+                sandalwood, Apricot
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/vanilla-bodies.jpg">
+                <div class="card-info">
+                    <h3>Vanilla Bodies</h3>
+                    <span>Oriental • Soft Oriental</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Vanilla Bodies memiliki karakter aroma Oriental yang khas.
+                Dipadukan dengana keharuman segar dari Apricot, Peach, dan Plum.
+                Ditambah sentuhan wangi dari bunga-bunga yang memikat dan campuran hangat
+                Sandalwood hingga Amber, membuat wangi ini semakin terasa lembut.
+                Aroma ini juga didominasi oleh note Vanilla yang manis membuat wangi ini
+                tampak lebih sempurna.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Vanilla
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Amber, Musk
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/vanilla-ice.jpg">
+                <div class="card-info">
+                    <h3>Vanilla Ice</h3>
+                    <span>Oriental • Soft Oriental</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Vanilla Ice memiliki perpaduan aroma segar, hangat, dan manis yang sempurna.
+                Komposisi yang pas antara sweet notes, vanille, dan milk memberikan kesan
+                yang menyejukan. Kalo kamu suka dengan wangi yang sejuk dan menangkan,
+                varian ini akan cocok kamu jadikan pilihan.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                milk
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Sweet notes, vanille
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/vanilla.jpg">
+                <div class="card-info">
+                    <h3>Vanilla</h3>
+                    <span>Oriental • Soft Oriental</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Vanilla cake
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Rasberry
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Strawberry, Mandarin Orange
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/pine-forest.jpg">
+                <div class="card-info">
+                    <h3>Pine forest</h3>
+                    <span>Fresh • Fruity</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Beliggi memiliki aroma yang didominasi oleh buah-buahan segar dan alami.
+                Pada semprotan pertama, kamu akan diberikan ledakan buah manis dan segar
+                yang akan membawa kamu pada sensasi ceria, berenergi, dan penuh semangat.
+                Diimbangi dengan aroma hangat dari musk dan lily of the valley membuat
+                wangi ini semakin sempurna untuk menemani hari-harimu.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Rasberry
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Strawberry, Mandarin Orange
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/blueice.jpg">
+                <div class="card-info">
+                    <h3>Blue ice</h3>
+                    <span>Fresh • Fruity</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Beliggi memiliki aroma yang didominasi oleh buah-buahan segar dan alami.
+                Pada semprotan pertama, kamu akan diberikan ledakan buah manis dan segar
+                yang akan membawa kamu pada sensasi ceria, berenergi, dan penuh semangat.
+                Diimbangi dengan aroma hangat dari musk dan lily of the valley membuat
+                wangi ini semakin sempurna untuk menemani hari-harimu.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Rasberry
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Strawberry, Mandarin Orange
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/goody.jpg">
+                <div class="card-info">
+                    <h3>Goody</h3>
+                    <span>Oriental • Soft oriental</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+               Kesan yang diberikan adalah elegan, berani, namun tetap feminin,
+               sehingga sangat cocok digunakan untuk acara malam hari atau saat cuaca dingin
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Tonka Bean
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Cacao , Tuberose
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/dalalB.jpg">
+                <div class="card-info">
+                    <h3>Sweet Apple</h3>
+                    <span>Fresh • Fruity</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Dalal B memiliki aroma Oriental yang lembut, manis, dan memanjakan. 
+                Dikomposisikan dari dominan note Caramel, Vanilla, dan Orange
+                untuk menambah sentuhan segar alami dari buah.
+                Aroma yang lembut dan ringan ini dapat memberikan kamu
+                kesan segar yang alami dan tiada habisnya sepanjang hari.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Caramel
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Vanilla, Orange
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/Deeper.jpg">
+                <div class="card-info">
+                    <h3>Deeper</h3>
+                    <span>Oriental • Soft Oriental</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Deeper memiliki keharuman Oriental yang lembur.
+                Dikomposisikan dari perpaduan Vanilla yang manis, Ginger, dan Blood Orange.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Vanilla
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Ginger, Blood Orange
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/MEN-SECTION.jpg">
+                <div class="card-info">
+                    <h3>Men Section</h3>
+                    <span>Oriental • Soft Oriental</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Man Section memiliki karakter aroma Oriental yang lembut.
+                Kami ciptakan dari perpaduan Mandarin Orange, Bergamor, dan Green Notes.
+                Mereka mampu memadukan aroma yang segar dan elegan dalam satu semprotan.
+                Aroma ini juga memiliki wangi-wangi oriental yang khas, seperti Pepper,
+                Musk, Amber, dan Cardamom yang mampu memberikan kesan hangat yang memikat.
+                Tidak lupa ditambah sentuhan wangi woody, seperti Guaiac Wood
+                dan Sandalwood yang membuat wangi ini semakin terasa khas.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Vanilla
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Guaiac Wood , Pepper
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/Garuda.jpg">
+                <div class="card-info">
+                    <h3>Garuda</h3>
+                    <span>Oriental • Woody Oriental</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Garuda memiliki aroma yang merepresentasikan karakter Oriental-Woody
+                Oriental yang khas dan elegan.Keharumannya berasal dari perpaduan hangat Cumin
+                dan Pink Pepper yang memberi kesan spicy, ditambah sentuhan Orange dan
+                Bergamot yang segar, dan dominasi note vanila yang manis.
+                Parfum ini cocok kamu jadikan pilihan untuk mendapatkan keharuman manis, hangat, dan menyegarkan.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Vanilla
+            <br><br>
+                <strong>Element Notes</strong><br>
+                patchouli, Safron
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/Giehart.jpg">
+                <div class="card-info">
+                    <h3>Giehart</h3>
+                    <span>Oriental • Woody Oriental</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Aroma yang dikenal dengan wangi manis, tetapi memiliki sentuhan khas dari wangi patchouli yang kuat.
+                Dipadukan dengan elemen segar dari buah dan bunga yang hangat, membuat wangi ini terkesan sensual.
+            <strong>Dominant notes</strong><br>
+                patchouli
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Dark Chocolate , Honey
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/Ronald.jpg">
+                <div class="card-info">
+                    <h3>Ronald</h3>
+                    <span>Oriental • Soft Oriental</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Ronald memiliki keharuman Oriental yang lembut.
+                Dipadukan dari notes Vanilla yang manis, Cardamon, dan Lavender yang elegan.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Vanilla
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Lavender , Cardamom
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/SweetApple.jpg">
+                <div class="card-info">
+                    <h3>Sweet Apple</h3>
+                    <span>Fresh • Fruity</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Beliggi memiliki aroma yang didominasi oleh buah-buahan segar dan alami.
+                Pada semprotan pertama, kamu akan diberikan ledakan buah manis dan segar
+                yang akan membawa kamu pada sensasi ceria, berenergi, dan penuh semangat.
+                Diimbangi dengan aroma hangat dari musk dan lily of the valley membuat
+                wangi ini semakin sempurna untuk menemani hari-harimu.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Rasberry
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Strawberry, Mandarin Orange
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/SweetApple.jpg">
+                <div class="card-info">
+                    <h3>Sweet Apple</h3>
+                    <span>Fresh • Fruity</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Beliggi memiliki aroma yang didominasi oleh buah-buahan segar dan alami.
+                Pada semprotan pertama, kamu akan diberikan ledakan buah manis dan segar
+                yang akan membawa kamu pada sensasi ceria, berenergi, dan penuh semangat.
+                Diimbangi dengan aroma hangat dari musk dan lily of the valley membuat
+                wangi ini semakin sempurna untuk menemani hari-harimu.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Rasberry
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Strawberry, Mandarin Orange
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/SweetApple.jpg">
+                <div class="card-info">
+                    <h3>Sweet Apple</h3>
+                    <span>Fresh • Fruity</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Beliggi memiliki aroma yang didominasi oleh buah-buahan segar dan alami.
+                Pada semprotan pertama, kamu akan diberikan ledakan buah manis dan segar
+                yang akan membawa kamu pada sensasi ceria, berenergi, dan penuh semangat.
+                Diimbangi dengan aroma hangat dari musk dan lily of the valley membuat
+                wangi ini semakin sempurna untuk menemani hari-harimu.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Rasberry
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Strawberry, Mandarin Orange
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/pine-forest.jpg">
+                <div class="card-info">
+                    <h3>Sweet Apple</h3>
+                    <span>Fresh • Fruity</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Beliggi memiliki aroma yang didominasi oleh buah-buahan segar dan alami.
+                Pada semprotan pertama, kamu akan diberikan ledakan buah manis dan segar
+                yang akan membawa kamu pada sensasi ceria, berenergi, dan penuh semangat.
+                Diimbangi dengan aroma hangat dari musk dan lily of the valley membuat
+                wangi ini semakin sempurna untuk menemani hari-harimu.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Rasberry
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Strawberry, Mandarin Orange
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/SweetApple.jpg">
+                <div class="card-info">
+                    <h3>Sweet Apple</h3>
+                    <span>Fresh • Fruity</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Beliggi memiliki aroma yang didominasi oleh buah-buahan segar dan alami.
+                Pada semprotan pertama, kamu akan diberikan ledakan buah manis dan segar
+                yang akan membawa kamu pada sensasi ceria, berenergi, dan penuh semangat.
+                Diimbangi dengan aroma hangat dari musk dan lily of the valley membuat
+                wangi ini semakin sempurna untuk menemani hari-harimu.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Rasberry
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Strawberry, Mandarin Orange
+            </div>
+        </div>
+
+         <div class="card">
+            <div class="card-header" onclick="toggleDrawer(this)">
+                <img src="images/SweetApple.jpg">
+                <div class="card-info">
+                    <h3>Pine forest</h3>
+                    <span>Fresh • citrus</span>
+                </div>
+                <div class="arrow">⌄</div>
+            </div>
+
+            <div class="card-body">
+                <strong>Karakteristik </strong><br>
+                Pine Forest memiliki aroma Fresh - Citrus. Dikomposisikan dari Citruses,
+                Bitter Orange, dan Mandarin Orange. Masing-masing aroma buah ini
+                memberikan aroma yang asam, manis, dan menyegarkan.
+                Sensasi buahnya begitu kental dan bisa kamu nikmati untuk kegiayan sehari-hari.
+            <br><br>
+            <strong>Dominant notes</strong><br>
+                Citruses
+            <br><br>
+                <strong>Element Notes</strong><br>
+                Bitter Orange, Mandarin Orange
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="footer">
+    <p>UCHI PARFUM BELIK</p>
+    
+    <span>Terima kasih sudah melihat katalog kami💐</span>
+    <div class="kontak">
+    <a href="https://instagram.com/uchiparfume.pemalang" class="item" target="_blank">
+    <img src="images/logo-ig.png" class="icon">
+    <span>@uchiparfume.pemalang</span>
+    </a>
+
+    <a href="https://wa.me/628xxxxxxxxxx" class="item" target="_blank">
+    <img src="images/wa-logo.jpg" class="icon">
+    <span>Chat</span>
+    </a>
+</div>
+    
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
