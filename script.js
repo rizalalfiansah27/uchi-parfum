@@ -1,120 +1,260 @@
-// ==========================
-// BUKA / TUTUP CARD
-// ==========================
+// ========================================
+// UCHI PARFUM - SCRIPT UTAMA
+// ========================================
 
-document.querySelectorAll(".card-header").forEach(header => {
+document.addEventListener("DOMContentLoaded", function () {
 
-    header.addEventListener("click", () => {
+    console.log("UCHI PARFUM - Script aktif");
 
-        const body = header.nextElementSibling;
-        const icon = header.querySelector(".arrow");
 
-        body.classList.toggle("open");
+    // ========================================
+    // CONTAINER
+    // ========================================
 
-        if (body.classList.contains("open")) {
-            icon.textContent = "⌃";
-        } else {
-            icon.textContent = "⌄";
-        }
+    const container = document.querySelector(".app-content");
+
+    if (!container) {
+        console.log("ERROR: .app-content tidak ditemukan");
+        return;
+    }
+
+
+    // ========================================
+    // AMBIL FOOTER
+    // ========================================
+
+    const footer = container.querySelector(".footer");
+
+
+    // ========================================
+    // LEPASKAN FOOTER DULU
+    // Supaya tidak ikut mengganggu urutan card
+    // ========================================
+
+    if (footer) {
+        footer.remove();
+    }
+
+
+    // ========================================
+    // AMBIL SEMUA CARD PARFUM
+    // ========================================
+
+    let cards = Array.from(
+        container.querySelectorAll(".card")
+    );
+
+
+    console.log(
+        "Jumlah card ditemukan:",
+        cards.length
+    );
+
+
+    // ========================================
+    // URUTKAN PRODUK A-Z
+    // ========================================
+
+    cards.sort(function (a, b) {
+
+        const namaA =
+            a.querySelector(".card-info h3")
+                ?.textContent
+                .trim() || "";
+
+        const namaB =
+            b.querySelector(".card-info h3")
+                ?.textContent
+                .trim() || "";
+
+        return namaA.localeCompare(
+            namaB,
+            "id"
+        );
 
     });
 
-});
+
+    // ========================================
+    // MASUKKAN CARD KEMBALI
+    // ========================================
+
+    cards.forEach(function (card) {
+
+        container.appendChild(card);
+
+    });
 
 
-// ==========================
-// AUTO URUTKAN NAMA PARFUM A-Z
-// ==========================
+    // ========================================
+    // FOOTER SELALU PALING BAWAH
+    // ========================================
 
-const container = document.querySelector(".app-content");
+    if (footer) {
 
-const sortedCards = Array.from(
-    document.querySelectorAll(".card")
-);
+        container.appendChild(footer);
 
-sortedCards.sort((a, b) => {
+        console.log(
+            "Footer berhasil dipindahkan ke paling bawah"
+        );
 
-    const namaA = a
-        .querySelector(".card-info h3")
-        .textContent
-        .trim();
+    } else {
 
-    const namaB = b
-        .querySelector(".card-info h3")
-        .textContent
-        .trim();
+        console.log(
+            "INFO: Footer tidak ditemukan"
+        );
 
-    return namaA.localeCompare(namaB, "id");
-
-});
+    }
 
 
-// Masukkan kembali card yang sudah diurutkan
+    // ========================================
+    // BUKA / TUTUP CARD
+    // ========================================
 
-sortedCards.forEach(card => {
-    container.appendChild(card);
-});
+    document.addEventListener(
+        "click",
+        function (event) {
 
+            const header =
+                event.target.closest(".card-header");
 
-// ==========================
-// FOOTER
-// ==========================
-
-const footer = document.querySelector(".footer");
-
-if (footer) {
-    container.appendChild(footer);
-}
+            // Bukan header card
+            if (!header) return;
 
 
-// ==========================
-// TOTAL JUMLAH PRODUK
-// ==========================
-
-const totalProduk = document.querySelectorAll(".card").length;
-
-const totalProdukElement =
-    document.getElementById("total-produk");
-
-if (totalProdukElement) {
-
-    totalProdukElement.textContent = totalProduk;
-
-}
+            const body =
+                header.nextElementSibling;
 
 
-// ==========================
-// SEARCH BAR
-// ==========================
-
-const input = document.querySelector(".search-bar input");
-
-const cards = document.querySelectorAll(".card");
-
-if (input) {
-
-    input.addEventListener("keyup", () => {
-
-        const value = input.value.toLowerCase();
-
-        cards.forEach(card => {
-
+            // Pastikan card-body ditemukan
             if (
-                card.innerText
-                    .toLowerCase()
-                    .includes(value)
+                !body ||
+                !body.classList.contains("card-body")
             ) {
 
-                card.style.display = "block";
+                console.log(
+                    "Card body tidak ditemukan"
+                );
 
-            } else {
+                return;
+            }
 
-                card.style.display = "none";
+
+            const icon =
+                header.querySelector(".arrow");
+
+
+            // Buka / tutup drawer
+            body.classList.toggle("open");
+
+
+            // Ubah tanda panah
+            if (icon) {
+
+                if (
+                    body.classList.contains("open")
+                ) {
+
+                    icon.textContent = "⌃";
+
+                } else {
+
+                    icon.textContent = "⌄";
+
+                }
 
             }
 
-        });
+        }
+    );
 
-    });
 
-}
+    // ========================================
+    // TOTAL JUMLAH PRODUK
+    // ========================================
+
+    const totalProdukElement =
+        document.getElementById("total-produk");
+
+
+    if (totalProdukElement) {
+
+        totalProdukElement.textContent =
+            cards.length;
+
+        console.log(
+            "Total produk:",
+            cards.length
+        );
+
+    } else {
+
+        console.log(
+            "ERROR: #total-produk tidak ditemukan"
+        );
+
+    }
+
+
+    // ========================================
+    // SEARCH BAR
+    // Bisa mencari:
+    // - Nama parfum
+    // - Kategori
+    // - Deskripsi
+    // - Dominant notes
+    // - Element notes
+    // ========================================
+
+    const input =
+        document.querySelector(
+            ".search-bar input"
+        );
+
+
+    if (input) {
+
+        input.addEventListener(
+            "input",
+            function () {
+
+                const value =
+                    this.value
+                        .toLowerCase()
+                        .trim();
+
+
+                cards.forEach(
+                    function (card) {
+
+                        const text =
+                            card.innerText
+                                .toLowerCase();
+
+
+                        // Jika kosong
+                        // atau teks ditemukan
+                        if (
+                            value === "" ||
+                            text.includes(value)
+                        ) {
+
+                            card.style.display = "";
+
+                        } else {
+
+                            card.style.display =
+                                "none";
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+    }
+
+
+});
