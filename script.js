@@ -258,3 +258,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
+// ==========================
+// SPLASH SCREEN
+// ==========================
+
+window.addEventListener("load", function () {
+
+    const splash = document.getElementById("splash-screen");
+
+    if (!splash) return;
+
+    setTimeout(function () {
+
+        splash.classList.add("hide");
+
+    }, 1600);
+
+});

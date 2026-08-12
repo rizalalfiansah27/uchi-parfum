@@ -563,3 +563,145 @@ ANIMASI
 
     display: block;
 }
+/* ==========================
+   SPLASH SCREEN
+========================== */
+
+#splash-screen {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(5, 18, 45, 0.92),
+            rgba(5, 18, 45, 0.98)
+        );
+
+    transition:
+        opacity 0.7s ease,
+        visibility 0.7s ease;
+}
+
+
+/* ISI SPLASH */
+
+.splash-content {
+    width: 90%;
+
+    max-width: 350px;
+
+    text-align: center;
+
+    color: white;
+
+    animation: splash masuk 0.8s ease;
+}
+
+
+/* LOGO */
+
+.splash-logo {
+    width: 220px;
+
+    max-width: 80%;
+
+    height: auto;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 auto 10px;
+}
+
+
+/* JUDUL */
+
+.splash-content h1 {
+    margin: 0;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* TAGLINE */
+
+.splash-content p {
+    margin: 6px 0 20px;
+
+    font-size: 11px;
+
+    opacity: 0.75;
+}
+
+
+/* LOADING */
+
+.splash-loading {
+    width: 35px;
+
+    height: 35px;
+
+    margin: auto;
+
+    border: 3px solid rgba(255,255,255,0.25);
+
+    border-top-color: #ffd54f;
+
+    border-radius: 50%;
+
+    animation: splash-spin 0.8s linear infinite;
+}
+
+
+/* ANIMASI MASUK */
+
+@keyframes splash-masuk {
+
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* ANIMASI LOADING */
+
+@keyframes splash-spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* SPLASH HILANG */
+
+#splash-screen.hide {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
