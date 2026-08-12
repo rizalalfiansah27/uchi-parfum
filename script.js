@@ -272,6 +272,6 @@ window.addEventListener("load", function () {
 
         splash.classList.add("hide");
 
-    }, 1600);
+    }, 2000);
 
 });

@@ -208,8 +208,8 @@ CARD
 .card {
     background: rgba(255, 255, 255, 0.06);
 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 
     border-radius: 16px;
 
@@ -569,111 +569,102 @@ ANIMASI
 
 #splash-screen {
     position: fixed;
-
     inset: 0;
 
     z-index: 9999;
 
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 
     background:
         linear-gradient(
-            rgba(5, 18, 45, 0.92),
+            rgba(5, 18, 45, 0.94),
             rgba(5, 18, 45, 0.98)
         );
 
     transition:
-        opacity 0.7s ease,
-        visibility 0.7s ease;
+        opacity 0.6s ease,
+        visibility 0.6s ease;
 }
 
 
-/* ISI SPLASH */
+/* ==========================
+   ISI SPLASH
+========================== */
 
 .splash-content {
-    width: 90%;
-
-    max-width: 350px;
-
     text-align: center;
-
     color: white;
-
-    animation: splash masuk 0.8s ease;
 }
 
 
-/* LOGO */
+/* ==========================
+   LOGO
+========================== */
 
 .splash-logo {
-    width: 220px;
-
-    max-width: 80%;
-
+    width: 180px;
     height: auto;
-
-    object-fit: contain;
 
     display: block;
 
-    margin: 0 auto 10px;
+    margin: 0 auto 5px;
+
+    opacity: 0;
+
+    animation:
+        intro-logo 0.7s ease forwards;
 }
 
 
-/* JUDUL */
+/* ==========================
+   JUDUL
+========================== */
 
 .splash-content h1 {
     margin: 0;
 
-    font-size: 22px;
+    font-size: 24px;
+
+    letter-spacing: 2px;
 
     font-weight: 700;
 
-    letter-spacing: 1px;
+    opacity: 0;
+
+    animation:
+        intro-title 0.7s ease 0.35s forwards;
 }
 
 
-/* TAGLINE */
+/* ==========================
+   TAGLINE
+========================== */
 
 .splash-content p {
-    margin: 6px 0 20px;
+    margin: 7px 0 0;
 
     font-size: 11px;
 
-    opacity: 0.75;
+    letter-spacing: 0.5px;
+
+    opacity: 0;
+
+    animation:
+        intro-tagline 0.7s ease 0.7s forwards;
 }
 
 
-/* LOADING */
+/* ==========================
+   LOGO INTRO
+========================== */
 
-.splash-loading {
-    width: 35px;
-
-    height: 35px;
-
-    margin: auto;
-
-    border: 3px solid rgba(255,255,255,0.25);
-
-    border-top-color: #ffd54f;
-
-    border-radius: 50%;
-
-    animation: splash-spin 0.8s linear infinite;
-}
-
-
-/* ANIMASI MASUK */
-
-@keyframes splash-masuk {
+@keyframes intro-logo {
 
     from {
         opacity: 0;
-        transform: scale(0.9);
+        transform: scale(0.7);
     }
 
     to {
@@ -684,24 +675,52 @@ ANIMASI
 }
 
 
-/* ANIMASI LOADING */
+/* ==========================
+   JUDUL INTRO
+========================== */
 
-@keyframes splash-spin {
+@keyframes intro-title {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+        letter-spacing: 8px;
+    }
 
     to {
-        transform: rotate(360deg);
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 2px;
     }
 
 }
 
 
-/* SPLASH HILANG */
+/* ==========================
+   TAGLINE INTRO
+========================== */
+
+@keyframes intro-tagline {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 0.75;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==========================
+   OUTRO SPLASH
+========================== */
 
 #splash-screen.hide {
-
     opacity: 0;
-
     visibility: hidden;
-
     pointer-events: none;
 }
