@@ -445,7 +445,7 @@ ANIMASI
 .footer-content > p:first-child {
     margin: 0;
 
-    font-size: 18px;
+    font-size: 17px;
 
     font-weight: 700;
 
@@ -465,7 +465,7 @@ ANIMASI
 
     margin-top: 3px;
 
-    font-size: 12px;
+    font-size: 11px;
 
     color: white;
 
@@ -480,7 +480,7 @@ ANIMASI
 .footer .total {
     margin: 7px 0 0;
 
-    font-size: 14px;
+    font-size: 11px;
 
     color: white;
 }
@@ -536,6 +536,26 @@ ANIMASI
     object-fit: cover;
 
     display: block;
+}
+.maps-link { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+
+    margin-top: 6px; 
+    transform: translateX(-55px);
+}
+
+.maps-link .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    font-size: 11px;
+    color: white;
+    text-decoration: none;
 }
 /* ==========================
    GAMBAR DI SAMPING TEKS
@@ -595,16 +615,22 @@ ANIMASI
 
 .splash-content {
     text-align: center;
-    color: white;
+    color: yellow;
+}
+.splash-keunggulan {
+    color: #fefdfd;
 }
 
+.splash-slogan {
+    color: yellow;
+}
 
 /* ==========================
    LOGO
 ========================== */
 
 .splash-logo {
-    width: 180px;
+    width: 140px;
     height: auto;
 
     display: block;
@@ -625,7 +651,7 @@ ANIMASI
 .splash-content h1 {
     margin: 0;
 
-    font-size: 24px;
+    font-size: 22px;
 
     letter-spacing: 2px;
 
@@ -708,7 +734,7 @@ ANIMASI
     }
 
     to {
-        opacity: 0.75;
+        opacity: 0.70;
         transform: translateY(0);
     }
 
@@ -723,4 +749,62 @@ ANIMASI
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+/* ==========================
+   ORNAMEN HEADER
+========================== */
+.app-header {
+    position: sticky;
+    overflow: hidden;
+}
+
+.app-header::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 85px;
+
+    background-image: url("images/twipml.png");
+    background-repeat: no-repeat;
+
+    background-size: 100% auto;
+    background-position: center top;
+
+    z-index: 1;
+    pointer-events: none;
+}
+
+.header-left {
+    position: relative;
+    z-index: 2;
+}
+/* ==========================
+   FOOTER SPLASH KEMERDEKAAN
+========================== */
+
+.splash {
+    position: relative;
+    overflow: hidden;
+}
+
+.splash-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+    z-index: 5;
+}
+
+.splash-footer img {
+    width: 100%;
+    height: auto;
+
+    display: block;
 }
