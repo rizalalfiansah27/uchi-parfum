@@ -3,28 +3,27 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+
 /* ==========================
-BODY
+   BODY CARD
 ========================== */
 
-body {
-    margin: 0;
-    background: #e5e5e5;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    min-height: 100vh;
+.card-body {
+    display: none;
+    padding: 8px 12px 12px 64px;
+    color: white;
+    font-size: 12px;
+    line-height: 1.4;
+    animation: fade 0.2s ease;
 }
-html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+
+.card-body.open {
+    display: block;
 }
+
 
 /* ==========================
-FRAME APP
+   FRAME APP
 ========================== */
 
 .app {
@@ -49,8 +48,9 @@ FRAME APP
     flex-direction: column;
 }
 
+
 /* ==========================
-NOTCH
+   NOTCH
 ========================== */
 
 .app::before {
@@ -73,8 +73,9 @@ NOTCH
     z-index: 10;
 }
 
+
 /* ==========================
-HEADER
+   HEADER
 ========================== */
 
 .app-header {
@@ -94,7 +95,10 @@ HEADER
     top: 0;
 
     z-index: 10;
+
+    overflow: hidden;
 }
+
 
 .header-left {
     display: flex;
@@ -102,7 +106,12 @@ HEADER
     gap: 12px;
 
     align-items: center;
+
+    position: relative;
+
+    z-index: 2;
 }
+
 
 .header-left img {
     width: 55px;
@@ -111,6 +120,7 @@ HEADER
     object-fit: contain;
 }
 
+
 .app-header h1 {
     margin: 0;
 
@@ -118,6 +128,7 @@ HEADER
 
     color: white;
 }
+
 
 .app-header p {
     margin: 2px 0 0;
@@ -129,8 +140,38 @@ HEADER
     opacity: 0.8;
 }
 
+
 /* ==========================
-SEARCH
+   ORNAMEN HEADER
+========================== */
+
+.app-header::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 85px;
+
+    background-image: url("images/twipml.png");
+
+    background-repeat: no-repeat;
+
+    background-size: 100% auto;
+
+    background-position: center top;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* ==========================
+   SEARCH
 ========================== */
 
 .search-bar {
@@ -158,6 +199,7 @@ SEARCH
     z-index: 9;
 }
 
+
 .search-bar input {
     border: none;
 
@@ -172,12 +214,14 @@ SEARCH
     font-size: 13px;
 }
 
+
 .search-bar input::placeholder {
     color: rgba(255, 255, 255, 0.75);
 }
 
+
 /* ==========================
-CONTENT
+   CONTENT
 ========================== */
 
 .app-content {
@@ -192,13 +236,15 @@ CONTENT
     -webkit-overflow-scrolling: touch;
 }
 
+
 /* ==========================
-SCROLLBAR
+   SCROLLBAR
 ========================== */
 
 .app-content::-webkit-scrollbar {
     width: 4px;
 }
+
 
 .app-content::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.3);
@@ -206,8 +252,9 @@ SCROLLBAR
     border-radius: 10px;
 }
 
+
 /* ==========================
-CARD
+   CARD
 ========================== */
 
 .card {
@@ -226,8 +273,11 @@ CARD
 
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
 
-    transition: 0.2s;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
+
 
 /* Hover hanya untuk komputer */
 
@@ -235,12 +285,16 @@ CARD
 
     .card:hover {
         transform: translateY(-2px);
+
+        box-shadow:
+            0 10px 22px rgba(0, 0, 0, 0.3);
     }
 
 }
 
+
 /* ==========================
-GARIS AKSEN
+   GARIS AKSEN
 ========================== */
 
 .card::before {
@@ -259,10 +313,13 @@ GARIS AKSEN
         #ffd54f,
         #ffb300
     );
+
+    z-index: 2;
 }
 
+
 /* ==========================
-HEADER CARD
+   HEADER CARD
 ========================== */
 
 .card-header {
@@ -277,6 +334,7 @@ HEADER CARD
     cursor: pointer;
 }
 
+
 .card-header img {
     width: 40px;
     height: 40px;
@@ -286,9 +344,11 @@ HEADER CARD
     object-fit: cover;
 }
 
+
 .card-info {
     flex: 1;
 }
+
 
 .card-info h3 {
     margin: 0;
@@ -298,6 +358,7 @@ HEADER CARD
     color: white;
 }
 
+
 .card-info span {
     font-size: 11px;
 
@@ -305,6 +366,7 @@ HEADER CARD
 
     opacity: 0.8;
 }
+
 
 .arrow {
     color: white;
@@ -314,45 +376,205 @@ HEADER CARD
     transition: 0.2s;
 }
 
+
 /* ==========================
-BODY DRAWER
+   BODY DRAWER
 ========================== */
 
 .card-body {
     display: none;
 
-    padding: 8px 12px 12px 64px;
+    padding: 8px 12px 16px 64px;
 
     color: white;
 
     font-size: 12px;
 
-    line-height: 1.4;
+    line-height: 1.5;
 
     animation: fade 0.2s ease;
 }
+
 
 .card-body.open {
     display: block;
 }
 
+
 /* ==========================
-ANIMASI
+   ANIMASI CARD
 ========================== */
 
 @keyframes fade {
 
     from {
         opacity: 0;
+
         transform: translateY(-5px);
     }
 
     to {
         opacity: 1;
+
         transform: translateY(0);
     }
 
 }
+
+
+/* ==========================
+   TOMBOL PESAN PARFUM
+   MODERN / PREMIUM
+========================== */
+
+.btn-pesan {
+    width: 100%;
+
+    min-height: 48px;
+
+    margin-top: 16px;
+
+    padding: 10px 12px 10px 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    border: 1px solid rgba(255, 213, 79, 0.65);
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 213, 79, 0.16),
+            rgba(255, 179, 0, 0.06)
+        );
+
+    color: #ffd54f;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 16px rgba(0, 0, 0, 0.20);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* ICON CHAT */
+
+.btn-pesan .btn-icon {
+    width: 27px;
+
+    height: 27px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(255, 213, 79, 0.65);
+
+    border-radius: 50%;
+
+    font-size: 13px;
+
+    flex-shrink: 0;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* TEKS TOMBOL */
+
+.btn-pesan span:nth-child(2) {
+    white-space: nowrap;
+}
+
+
+/* PANAH */
+
+.btn-pesan .btn-arrow {
+    margin-left: auto;
+
+    font-size: 20px;
+
+    line-height: 1;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+/* HOVER */
+
+@media (hover: hover) {
+
+    .btn-pesan:hover {
+
+        transform: translateY(-2px);
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(255, 213, 79, 0.27),
+                rgba(255, 179, 0, 0.12)
+            );
+
+        border-color: #ffd54f;
+
+        box-shadow:
+            0 8px 22px rgba(0, 0, 0, 0.30),
+            0 0 14px rgba(255, 213, 79, 0.12);
+    }
+
+
+    .btn-pesan:hover .btn-icon {
+
+        transform: scale(1.08);
+
+        background: rgba(255, 213, 79, 0.08);
+    }
+
+
+    .btn-pesan:hover .btn-arrow {
+
+        transform: translateX(5px);
+    }
+
+}
+
+
+/* SAAT DITEKAN */
+
+.btn-pesan:active {
+
+    transform: scale(0.97);
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
 
 /* ==========================
    FOOTER UCHI PARFUM
@@ -398,13 +620,15 @@ ANIMASI
 
     color: white;
 
-    box-shadow: 0 8px 18px rgba(5, 38, 111, 0.25);
+    box-shadow:
+        0 8px 18px rgba(5, 38, 111, 0.25);
+
+    padding-right: 130px;
 }
 
 
 /* ==========================
    ORNAMEN GAMBAR
-   LAYER PALING DEPAN
 ========================== */
 
 .footer-ornament {
@@ -427,7 +651,7 @@ ANIMASI
 
 
 /* ==========================
-   GAMBAR
+   GAMBAR FOOTER
 ========================== */
 
 .footer-ornament img {
@@ -444,10 +668,11 @@ ANIMASI
 
 
 /* ==========================
-   JUDUL
+   JUDUL FOOTER
 ========================== */
 
 .footer-content > p:first-child {
+
     margin: 0;
 
     font-size: 17px;
@@ -456,16 +681,14 @@ ANIMASI
 
     color: white;
 }
-.footer-content {
-    text-align: center;
-    padding-right: 130px;
-}
+
 
 /* ==========================
    TAGLINE
 ========================== */
 
 .footer-content > span {
+
     display: block;
 
     margin-top: 3px;
@@ -483,6 +706,7 @@ ANIMASI
 ========================== */
 
 .footer .total {
+
     margin: 7px 0 0;
 
     font-size: 11px;
@@ -490,7 +714,9 @@ ANIMASI
     color: white;
 }
 
+
 #total-produk {
+
     color: #ffd54f;
 
     font-size: 12px;
@@ -504,6 +730,7 @@ ANIMASI
 ========================== */
 
 .footer .kontak {
+
     display: flex;
 
     justify-content: center;
@@ -515,7 +742,9 @@ ANIMASI
     margin-top: 7px;
 }
 
+
 .footer .item {
+
     display: flex;
 
     align-items: center;
@@ -531,7 +760,9 @@ ANIMASI
     white-space: nowrap;
 }
 
+
 .footer .icon {
+
     width: 20px;
 
     height: 20px;
@@ -542,37 +773,58 @@ ANIMASI
 
     display: block;
 }
-.maps-link { 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
 
-    margin-top: 6px; 
+
+/* ==========================
+   MAPS
+========================== */
+
+.maps-link {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-top: 6px;
+
     transform: translateX(-55px);
 }
 
+
 .maps-link .item {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     gap: 4px;
 
     font-size: 11px;
+
     color: white;
+
     text-decoration: none;
 }
+
+
 /* ==========================
-   GAMBAR DI SAMPING TEKS
+   GAMBAR SAMPING FOOTER
 ========================== */
 
 .footer-side-image {
+
     position: absolute;
 
     top: 15px;
+
     right: 40px;
 
     width: 75px;
+
     height: 75px;
 
     z-index: 10;
@@ -580,26 +832,35 @@ ANIMASI
     pointer-events: none;
 }
 
+
 .footer-side-image img {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: contain;
 
     display: block;
 }
+
+
 /* ==========================
    SPLASH SCREEN
 ========================== */
 
 #splash-screen {
+
     position: fixed;
+
     inset: 0;
 
     z-index: 9999;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     background:
@@ -619,23 +880,33 @@ ANIMASI
 ========================== */
 
 .splash-content {
+
     text-align: center;
+
     color: yellow;
 }
+
+
 .splash-keunggulan {
+
     color: #fefdfd;
 }
 
+
 .splash-slogan {
+
     color: yellow;
 }
 
+
 /* ==========================
-   LOGO
+   LOGO SPLASH
 ========================== */
 
 .splash-logo {
+
     width: 140px;
+
     height: auto;
 
     display: block;
@@ -650,10 +921,11 @@ ANIMASI
 
 
 /* ==========================
-   JUDUL
+   JUDUL SPLASH
 ========================== */
 
 .splash-content h1 {
+
     margin: 0;
 
     font-size: 22px;
@@ -670,10 +942,11 @@ ANIMASI
 
 
 /* ==========================
-   TAGLINE
+   TAGLINE SPLASH
 ========================== */
 
 .splash-content p {
+
     margin: 7px 0 0;
 
     font-size: 11px;
@@ -694,12 +967,16 @@ ANIMASI
 @keyframes intro-logo {
 
     from {
+
         opacity: 0;
+
         transform: scale(0.7);
     }
 
     to {
+
         opacity: 1;
+
         transform: scale(1);
     }
 
@@ -713,14 +990,20 @@ ANIMASI
 @keyframes intro-title {
 
     from {
+
         opacity: 0;
+
         transform: translateY(15px);
+
         letter-spacing: 8px;
     }
 
     to {
+
         opacity: 1;
+
         transform: translateY(0);
+
         letter-spacing: 2px;
     }
 
@@ -734,12 +1017,16 @@ ANIMASI
 @keyframes intro-tagline {
 
     from {
+
         opacity: 0;
+
         transform: translateY(10px);
     }
 
     to {
+
         opacity: 0.70;
+
         transform: translateY(0);
     }
 
@@ -751,40 +1038,493 @@ ANIMASI
 ========================== */
 
 #splash-screen.hide {
+
     opacity: 0;
+
     visibility: hidden;
+
     pointer-events: none;
 }
+
+
 /* ==========================
-   ORNAMEN HEADER
+   POPUP PEMBELIAN
 ========================== */
-.app-header {
-    position: sticky;
-    overflow: hidden;
+
+.popup-beli {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    backdrop-filter: blur(6px);
+
+    -webkit-backdrop-filter: blur(6px);
 }
 
-.app-header::after {
-    content: "";
 
-    position: absolute;
-    top: 0;
-    left: 0;
+.popup-beli.show {
+
+    display: flex;
+}
+
+
+.popup-box {
+
+    position: relative;
 
     width: 100%;
-    height: 85px;
 
-    background-image: url("images/twipml.png");
-    background-repeat: no-repeat;
+    max-width: 370px;
 
-    background-size: 100% auto;
-    background-position: center top;
+    max-height: 90vh;
 
-    z-index: 1;
-    pointer-events: none;
+    overflow-y: auto;
+
+    padding: 22px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(30, 45, 80, 0.98),
+            rgba(10, 20, 45, 0.98)
+        );
+
+    color: white;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45);
+
+    border:
+        1px solid rgba(255,255,255,0.15);
+
+    animation:
+        popupMasuk 0.25s ease;
 }
 
-.header-left {
-    position: relative;
-    z-index: 2;
+
+@keyframes popupMasuk {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px)
+            scale(0.96);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
 }
 
+
+/* ==========================
+   TOMBOL X
+========================== */
+
+.popup-close {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 12px;
+
+    width: 32px;
+
+    height: 32px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.popup-close:hover {
+
+    background:
+        rgba(255,255,255,0.22);
+}
+
+
+/* ==========================
+   JUDUL POPUP
+========================== */
+
+.popup-title {
+
+    margin: 0 35px 20px 0;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: white;
+}
+
+
+/* ==========================
+   GROUP PILIHAN
+========================== */
+
+.pilihan-group {
+
+    margin-bottom: 18px;
+}
+
+
+.pilihan-group label {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: white;
+}
+
+
+/* ==========================
+   GRID
+========================== */
+
+.option-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 8px;
+}
+
+
+.botol-grid {
+
+    grid-template-columns:
+        repeat(3, 1fr);
+}
+
+
+/* ==========================
+   TOMBOL PILIHAN
+========================== */
+
+.option-btn {
+
+    min-height: 48px;
+
+    padding: 8px 6px;
+
+    border:
+        1px solid rgba(255,255,255,0.2);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    transition: 0.2s;
+}
+
+
+.option-btn strong {
+
+    display: block;
+
+    font-size: 14px;
+}
+
+
+.option-btn span {
+
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 11px;
+
+    opacity: 0.75;
+}
+
+
+/* ==========================
+   SAAT DIPILIH
+========================== */
+
+.option-btn.active {
+
+    background: #ffd54f;
+
+    color: #17213d;
+
+    border-color: #ffd54f;
+
+    box-shadow:
+        0 4px 12px
+        rgba(255, 213, 79, 0.25);
+}
+
+
+.option-btn:hover {
+
+    transform: translateY(-1px);
+
+    background:
+        rgba(255,255,255,0.15);
+}
+
+
+/* ==========================
+   RINGKASAN PESANAN
+========================== */
+
+.order-summary {
+
+    margin-top: 20px;
+
+    padding: 14px;
+
+    border-radius: 14px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    border:
+        1px solid rgba(255,255,255,0.1);
+}
+
+
+.order-summary > div {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 6px 0;
+
+    font-size: 13px;
+}
+
+
+.order-summary span {
+
+    opacity: 0.7;
+}
+
+
+.order-summary strong {
+
+    color: #ffd54f;
+
+    text-align: right;
+}
+
+
+/* ==========================
+   TOMBOL WHATSAPP
+========================== */
+
+.btn-whatsapp {
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    min-height: 48px;
+
+    padding: 12px 16px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: #25d366;
+
+    color: #fafaf5;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.btn-whatsapp:hover {
+
+    transform: translateY(-1px);
+
+    filter: brightness(1.05);
+}
+
+
+.btn-whatsapp:disabled {
+
+    background:
+        rgba(255,255,255,0.15);
+
+    color:
+        rgba(255,255,255,0.4);
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* ==========================
+   SCROLLBAR POPUP
+========================== */
+
+.popup-box::-webkit-scrollbar {
+
+    width: 4px;
+}
+
+
+.popup-box::-webkit-scrollbar-thumb {
+
+    background:
+        rgba(255,255,255,0.3);
+
+    border-radius: 10px;
+}
+
+
+/* ==========================
+   HP KECIL
+========================== */
+
+@media (max-width: 400px) {
+
+    .popup-beli {
+
+        padding: 12px;
+    }
+
+
+    .popup-box {
+
+        padding: 18px;
+
+        max-height: 92vh;
+    }
+
+
+    .popup-title {
+
+        font-size: 20px;
+    }
+
+
+    .option-grid {
+
+        gap: 6px;
+    }
+
+
+    .option-btn {
+
+        font-size: 12px;
+    }
+
+
+    .botol-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+
+    /* TOMBOL PESAN DI HP */
+
+    .btn-pesan {
+
+        min-height: 46px;
+
+        padding:
+            9px 11px 9px 12px;
+
+        font-size: 12px;
+
+        border-radius: 14px;
+    }
+
+
+    .btn-pesan .btn-icon {
+
+        width: 26px;
+
+        height: 26px;
+
+        font-size: 12px;
+    }
+
+
+    .btn-pesan .btn-arrow {
+
+        font-size: 19px;
+    }
+
+}

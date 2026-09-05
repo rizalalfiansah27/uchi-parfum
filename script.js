@@ -5,20 +5,47 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     console.log("UCHI PARFUM - Script aktif");
+console.log("📦 Total card:", document.querySelectorAll(".card").length);
+console.log("🎯 Total card-header:", document.querySelectorAll(".card-header").length);
+console.log("🗄️ Total card-body:", document.querySelectorAll(".card-body").length);
 
+// ========================================
+// BUKA / TUTUP CARD
+// ========================================
 
-    // ========================================
-    // CONTAINER
-    // ========================================
+document.addEventListener(
+    "click",
+    function (event) {
+        const header = event.target.closest(".card-header");
+        
+        // Bukan header card
+        if (!header) return;
 
-    const container = document.querySelector(".app-content");
+        // Cari card induknya
+        const card = header.closest(".card");
+        
+        // Cari card-body di dalam card yang sama
+        const body = card?.querySelector(".card-body");
 
-    if (!container) {
-        console.log("ERROR: .app-content tidak ditemukan");
-        return;
+        // Pastikan card-body ditemukan
+        if (!body) {
+            console.log("Card body tidak ditemukan");
+            return;
+        }
+
+        const icon = header.querySelector(".arrow");
+
+        // Buka / tutup drawer
+        body.classList.toggle("open");
+
+        // Ubah tanda panah
+        if (icon) {
+            icon.textContent = body.classList.contains("open") ? "⌃" : "⌄";
+        }
+        
+        console.log("Card toggled:", body.classList.contains("open"));
     }
-
-
+);
     // ========================================
     // AMBIL FOOTER
     // ========================================
@@ -198,6 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ========================================
     // SEARCH BAR
+    
     // Bisa mencari:
     // - Nama parfum
     // - Kategori
@@ -205,6 +233,46 @@ document.addEventListener("DOMContentLoaded", function () {
     // - Dominant notes
     // - Element notes
     // ========================================
+    document.addEventListener("DOMContentLoaded", function () {
+
+    const searchInput = document.getElementById("searchInput");
+    const cards = document.querySelectorAll(".card");
+
+    if (!searchInput) {
+        console.log("Search input tidak ditemukan!");
+        return;
+    }
+
+    searchInput.addEventListener("input", function () {
+
+        const keyword = searchInput.value.toLowerCase().trim();
+
+        cards.forEach(function (card) {
+
+            const namaParfum = card
+                .querySelector(".card-info h3")
+                ?.textContent
+                .toLowerCase() || "";
+
+            const isiParfum = card
+                .querySelector(".card-body")
+                ?.textContent
+                .toLowerCase() || "";
+
+            if (
+                namaParfum.includes(keyword) ||
+                isiParfum.includes(keyword)
+            ) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+
+        });
+
+    });
+
+});
 
     const input =
         document.querySelector(

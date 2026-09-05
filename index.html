@@ -7,14 +7,10 @@
     
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <meta http-equiv="Content-Security-Policy"
-content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com;">
-</head>
-<body>
+    </head>
+    <body>
     <script src="script.js"></script>
-</body>
-
-<div id="splash-screen">
+    <div id="splash-screen">
 
     <div class="splash-content">
 
@@ -51,12 +47,15 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
         </div>
     </header>
 
-    <!-- Search Bar -->
-    <div class="search-bar">
-        <span class="material-icons search-icon">search</span>
-        <input type="text" placeholder="Cari parfum kesukaanmu...">
-    </div>
-
+   <!-- Search Bar -->
+<div class="search-bar">
+    <span class="material-icons search-icon">search</span>
+    <input 
+        type="text" 
+        id="searchInput"
+        placeholder="Cari parfum kesukaanmu..."
+    >
+</div>
     <!-- List -->
     <main class="app-content">
 
@@ -83,32 +82,52 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
                 <br><br>
                 <strong>Element Notes</strong><br>
                 Red currant, Fragipani, Jasmine
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-header">
-                <img src="images/ADISPORT.webp">
-                <div class="card-info">
-                    <h3>Adisport</h3>
-                    <span>Fresh • Aromatic </span>
-                </div>
-                <div class="arrow">⌄</div>
-            </div>
-            <div class="card-body">
-                <strong>Karakteristik </strong><br>
-                Adisport memiliki aroma yang segar dengan sentuhan aromatic
-                yang khas untuk menambah kesan hangat. Dikombinasikan dari notes Tomato
-                Leaf, Mint, dan Anise. Seluruh notes ini menyatu menjadi satu aroma yang segar
-                dengan komposisi yang ringan, membuat aroma ini cocok dipakai untuk olahraga.
-                <br><br>
-                <strong>Dominant notes</strong><br>
-                Tomato Leaf
-                <br><br>
-                <strong>Element Notes</strong><br>
-                Mint, Anise
-            </div>
-        </div>
+        <div class="card"> 
+    <div class="card-header"> 
+        <img src="images/ADISPORT.webp"> 
+
+        <div class="card-info"> 
+            <h3>Adisport</h3> 
+            <span>Fresh • Aromatic</span> 
+        </div> 
+
+        <div class="arrow">⌄</div> 
+    </div> 
+
+
+    <div class="card-body"> 
+
+        <strong>Karakteristik</strong><br> 
+        Adisport memiliki aroma yang segar dengan sentuhan aromatic 
+        yang khas untuk menambah kesan hangat. Dikombinasikan dari notes Tomato 
+        Leaf, Mint, dan Anise. Seluruh notes ini menyatu menjadi satu aroma yang segar 
+        dengan komposisi yang ringan, membuat aroma ini cocok dipakai untuk olahraga. 
+
+        <br><br> 
+
+        <strong>Dominant notes</strong><br> 
+        Tomato Leaf 
+
+        <br><br> 
+
+        <strong>Element Notes</strong><br> 
+        Mint, Anise 
+
+        <button class="btn-pesan" onclick="pesanParfum(this)">
+    <span class="btn-icon">🛒</span>
+    <span>Pesan parfum ini</span>
+    <span class="btn-arrow">→</span>
+</button>
+
+    </div> 
+</div>
 
         <div class="card">
             <div class="card-header">
@@ -129,6 +148,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
                 <br><br>
                 <strong>Element Notes</strong><br>
                 Cashmere Wood, Musk
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -175,6 +198,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
                 <br><br>
                 <strong>Element Notes</strong><br>
                 Mexican Chocolatte, Heliotrope
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
         <div class="card">
@@ -200,6 +227,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
                 <br><br>
                 <strong>Element Notes</strong><br>
                 Granny Smith Apple, Heliotrope
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -279,6 +310,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Tahitian Vanilla , Anise
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -305,6 +340,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Pear, Mango
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -329,6 +368,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Vodka , Lime
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -352,6 +395,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Lavender , Grapefruit
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -378,6 +425,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Red pepper , Sage
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -401,6 +452,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Bergamot , Mandarin Orange
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -427,6 +482,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Cedar, Lavender
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -451,6 +510,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 freesia, lily-of-the-valley
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -476,6 +539,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Calabrian Bergamot, Pink Grapefruit
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -502,6 +569,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Mandarin Orange, Orange
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -527,6 +598,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Woodsy notes, Iris
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -550,6 +625,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Vanilla, Green tea
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -575,7 +654,11 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
                 Lotus
             <br><br>
                 <strong>Element Notes</strong><br>
-                Msuk, Tea
+                Musk, Tea
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 <div class="card">
@@ -599,6 +682,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Grapefruit, Bergamot
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -623,6 +710,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Vanilla, Pear
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -649,6 +740,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Strawberry, Mandarin Orange
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -675,6 +770,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Rose, Green Leaves
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -702,6 +801,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Cupcake, Kiwi
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -726,6 +829,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Sugar, Apple
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -752,6 +859,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 sandalwood, Apricot
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -780,6 +891,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Amber, Musk
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -806,6 +921,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Sweet notes, vanille
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -832,6 +951,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Milk , Madagascar Vanilla
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -858,6 +981,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Bitter Orange , Mandarin Orange
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -885,6 +1012,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Bergamot , Mandarin Orange
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -909,6 +1040,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Cacao , Tuberose
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -936,6 +1071,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Vanilla, Orange
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -960,6 +1099,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Ginger, Blood Orange
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -989,6 +1132,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Guaiac Wood , Pepper
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1016,6 +1163,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 patchouli, Saffron
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1039,6 +1190,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Dark Chocolate , Honey
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1063,6 +1218,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Lavender , Cardamom
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1086,6 +1245,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Rasberry, Black Currant
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1109,6 +1272,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Vanila Orchid , Litchi
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1132,6 +1299,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Madagascar Vanilla , Tuberose
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1157,6 +1328,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Caramel , Oakmoss
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1167,7 +1342,7 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
                     <h3>Icy Strawberries</h3>
                     <span>Fresh • Fruity</span>
                 </div>
-                <div class="arrow">⌄</div>f
+                <div class="arrow">⌄</div>
             </div>
 
             <div class="card-body">
@@ -1183,6 +1358,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Amber , Woody Notes
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1207,6 +1386,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Bitter Orange , Clementine
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1232,6 +1415,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Vanila , Woody Notes
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1257,6 +1444,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Apple , Cedar
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1282,6 +1473,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Vanilla , Candy Apple
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1305,6 +1500,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Grapefruit , Bergamot
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1329,6 +1528,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Vanilla , Tonka Bean
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1352,6 +1555,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Marshmallow , Rasberry
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1375,6 +1582,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Ambergris , saffron
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1399,6 +1610,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Water Lily , Musk
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1422,6 +1637,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Lavender , Mint
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1447,6 +1666,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Blackcurrant , Palm Tree
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1474,6 +1697,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Strawberry , Grapefruit
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1496,6 +1723,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Rasberry , Peach
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1518,6 +1749,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Orange , Litchi
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1540,6 +1775,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Lime , Lemon
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1562,6 +1801,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Leather , Mint
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1584,6 +1827,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Musk , Orange
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1606,6 +1853,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Vanilla , Sweet Notes
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1629,6 +1880,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Peach , Orange
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1652,6 +1907,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Sweet Notes , Lily
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1675,6 +1934,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Vanilla , Whipped Cream
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1697,6 +1960,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Dark Chocolate , Rasberry
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1721,6 +1988,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Peach , Passionfruit
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1745,6 +2016,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Musk , Green Notes
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1769,6 +2044,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Passionfruit , Grapefruit
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1791,6 +2070,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Bergamot , Whipped Cream
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1813,6 +2096,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 White Musk , Vanilla
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1835,6 +2122,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Melon , Melon
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1859,6 +2150,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Artemisia , Grapefruit
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1884,6 +2179,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 peony , Praline , Tonka Bean , Honey
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1907,6 +2206,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Lily , Aloe Vera
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1929,6 +2232,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Green Notes , Galbanum
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1950,6 +2257,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Vanilla , Fragipani
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -1978,6 +2289,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Vanilla , Fruity Notes
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2001,6 +2316,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Rum , Mandarin Orange
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2023,6 +2342,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Rose , Apple
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2045,6 +2368,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Cashmeran , Blackcurrant
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2068,6 +2395,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Tuberose, Ylang-Ylang , Agave.
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2091,6 +2422,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Sichuan Pepper , Pepper
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2115,6 +2450,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Peony , Bergamot
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2140,6 +2479,11 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Aloevera , Freesia
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
+                
             </div>
         </div>
 
@@ -2165,6 +2509,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Lemon , Kumquat
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2190,6 +2538,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Yuzu , Pineapple
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2214,6 +2566,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Cariander , Bergamot
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2238,6 +2594,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Patchouli , Coffee
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2259,6 +2619,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Marshmallow , Rasberry
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2283,6 +2647,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Vanilla Bean , Amber
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2308,6 +2676,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Vanilla , Lavender
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2332,6 +2704,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Red Apple , Pineapple
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2355,6 +2731,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Pink Pepper , Peach
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2377,6 +2757,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Vanilla , Cinnamon
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2400,6 +2784,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Bergamot , Lemon
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2423,6 +2811,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Lily-of-the-Valley , Lilac
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2446,6 +2838,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Vanilla , Red Berries
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2469,6 +2865,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Musk , Peach
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2491,6 +2891,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Apple , Cedar
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2515,6 +2919,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Musk , Pink Pepper
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2537,6 +2945,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Lavender , Sandalwood
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2561,6 +2973,10 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Orange Blossom , Neroli
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
 
@@ -2582,23 +2998,122 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
             <br><br>
                 <strong>Element Notes</strong><br>
                 Musk , Sandalwood
+                <button class="btn-pesan" onclick="pesanParfum(this)">
+                <span class="btn-icon">🛒</span>
+                <span>Pesan parfum ini</span>
+                <span class="btn-arrow">→</span>
             </div>
         </div>
+
+
+
+
+
+
+
+
             
 
 
-            
+    <!-- POPUP PEMBELIAN -->
+<div id="popupPembelian" class="popup-beli">
+
+    <div class="popup-box">
+
+        <button class="popup-close" onclick="tutupPembelian()">×</button>
+
+        <div class="popup-title">
+            <small>PESAN PARFUM</small>
+            <h2 id="produkDipilih">Adisport</h2>
+        </div>
+
+        <div class="pilihan-group">
+
+            <label>Perbandingan Parfum</label>
+
+            <div class="option-grid">
+
+                <button class="option-btn"
+                    onclick="pilihCampuran(this, '1 : 1')">
+                    <strong>1 : 1</strong>
+                    <span>Seimbang</span>
+                </button>
+
+                <button class="option-btn"
+                    onclick="pilihCampuran(this, '2 : 1')">
+                    <strong>2 : 1</strong>
+                    <span>Lebih pekat</span>
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="pilihan-group">
+
+            <label>Ukuran Botol</label>
+
+            <div class="option-grid botol-grid">
+
+                <button class="option-btn"
+                    onclick="pilihBotol(this, '30 ml')">
+                    <strong>30 ml</strong>
+                    <span>Praktis</span>
+                </button>
+
+                <button class="option-btn"
+                    onclick="pilihBotol(this, '50 ml')">
+                    <strong>50 ml</strong>
+                    <span>Favorit</span>
+                </button>
+
+                <button class="option-btn"
+                    onclick="pilihBotol(this, '100 ml')">
+                    <strong>100 ml</strong>
+                    <span>Lebih banyak</span>
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="order-summary">
+
+            <div>
+                <span>Parfum</span>
+                <strong id="summaryProduk">-</strong>
+            </div>
+
+            <div>
+                <span>Perbandingan</span>
+                <strong id="summaryCampuran">-</strong>
+            </div>
+
+            <div>
+                <span>Botol</span>
+                <strong id="summaryBotol">-</strong>
+            </div>
+
+        </div>
+
+        <button
+            id="btnWhatsApp"
+            class="btn-whatsapp"
+            onclick="kirimWhatsApp()"
+            disabled>
+
+            <span>Pesan melalui WhatsApp</span>
+            <span>→</span>
+
+        </button>
+
+    </div>
+
+</div>
 
 
-
-
-
-
-
-
-        
-
-
+<!-- JAVASCRIPT -->
+<script src="script.js"></script>
 
 
 <!-- ==========================
@@ -2679,3 +3194,30 @@ content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inli
     </div>
 
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".card-header").forEach(function (header) {
+        header.addEventListener("click", function () {
+            toggleDrawer(header);
+        });
+    });
+});
+
+function toggleDrawer(header) {
+    const body = header.nextElementSibling;
+    const arrow = header.querySelector(".arrow");
+
+    if (!body || !body.classList.contains("card-body")) {
+        return;
+    }
+
+    body.classList.toggle("open");
+
+    if (arrow) {
+        arrow.textContent = body.classList.contains("open") ? "⌃" : "⌄";
+    }
+}
+</script>
+
+</body>
+</html>
